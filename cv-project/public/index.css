@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* //flex w-screen h-screen justify-center items-center bg-blue-200 */
+body{
+    /* display: flex; */
+    width: 100vw;
+    height: 100vh;
+}
+
+.resize{
+    width: 90%;
+}
+
+textarea{
+    width: 90%;
+}
