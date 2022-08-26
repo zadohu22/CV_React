@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import GeneralInfo from './GeneralInfo';
 import Education from './Education';
 import WorkHistory from './WorkHistory';
-import FormButtons from './FormButtons';
-import { useState } from 'react';
 import SubmitButton from './SubmitButton';
-import EditButton from './EditButton';
 import ShowCV from './ShowCV';
 
 export default class Form extends Component {
@@ -40,18 +37,14 @@ export default class Form extends Component {
 
 	handleEdit(e) {
 		this.setState({ isShowingValues: false, [e.target.name]: e.target.value });
-		console.log('handle Edit');
 	}
 
 	handleChange(e) {
 		this.setState({ [e.target.name]: e.target.value });
-		console.log(e.target.name);
 	}
 
 	render() {
-		console.log(this.state.firstName);
 		const isShowingValues = this.state.isShowingValues;
-		console.log(isShowingValues);
 		let display;
 		if (!isShowingValues) {
 			display = (
